@@ -1,0 +1,5 @@
+package NotifySolution.Web.Controller;
+
+public class HalloWorldController {
+
+}

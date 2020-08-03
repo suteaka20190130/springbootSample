@@ -1,0 +1,24 @@
+-- 存在しない場合のみテーブルを定義
+CREATE TABLE IF NOT EXISTS batch.hoge (
+    id bigserial NOT NULL,
+    name character varying(100),
+    PRIMARY KEY(id),
+    UNIQUE(name)
+);
+
+-- nameの一意制約発生を避けるため、ON CONFLICTを使用
+INSERT INTO batch.hoge (name) VALUES ('taro')
+ON CONFLICT ON CONSTRAINT hoge_name_key
+DO NOTHING;
+
+INSERT INTO batch.hoge (name) VALUES ('jiro')
+ON CONFLICT ON CONSTRAINT hoge_name_key
+DO NOTHING;
+
+INSERT INTO batch.hoge (name) VALUES ('saburo')
+ON CONFLICT ON CONSTRAINT hoge_name_key
+DO NOTHING;
+
+INSERT INTO batch.hoge (name) VALUES ('shiro')
+ON CONFLICT ON CONSTRAINT hoge_name_key
+DO NOTHING;

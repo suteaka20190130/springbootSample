@@ -1,0 +1,12 @@
+# datasource
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.url=jdbc:h2:./test
+spring.datasource.username=sa
+spring.datasource.password=sa
+spring.datasource.initialization-mode=embedded
+
+# h2 for debug tool
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.h2.console.settings.web-allow-others=true
+

@@ -1,0 +1,9 @@
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.*;
+
+package NotifySolution.Web.Controller;
+
+public class HalloWorldController {
+
+}
